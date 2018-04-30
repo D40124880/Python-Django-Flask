@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Landing_Page/static/styles.css') }}">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="# or can be /action_page.php" method="get or post">
+        First Name: <br>
+        <input type="text" name="first"><br>
+        Last Name: <br>
+        <input type="text" name="last"><br>
+        Male<input type="radio" name="gender" value="male">
+        Female<input type="radio" name="gender" value="female"><br><br>
+
+        <textarea name="message" cols="30" rows="10">Enter your text here...</textarea><br>
+
+        <select name="cars" id="">
+            <option value="print">print</option>
+            <option value="none">none</option>
+            <option value="some">some</option>
+            <option value="drop drop">drop drop</option>
+        </select>
+
+    </form>
+    <br>
+    <button type="submit">Submit</button>
+    <br><br>
+    <a href="/" name"button"><button>Go back to Main Page</button></a>
+</body>
+</html>

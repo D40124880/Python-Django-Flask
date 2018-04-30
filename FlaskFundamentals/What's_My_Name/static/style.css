@@ -1,0 +1,10 @@
+*{
+    margin: 10px;
+    padding: 10px;
+}
+body{
+    background-color: aqua;
+    width: 800px;
+    height: 800px;
+    margin: auto;
+}

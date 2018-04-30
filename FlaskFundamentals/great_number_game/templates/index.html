@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Some Key</title>
+    <style>
+    *{
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Great Number Game!</h1>
+    <p>I am thinking of a number between 1 and 100 <br>
+    Take a guess!</p>
+    
+    <form class='initial' action='/guess' method='post'>
+        <input type="text" name="inputed"><input type=submit value="Enter">
+    </form>
+
+    {% if session['response'] == 'TOO LOW' %}
+    <form class="{{ session['class'] }}" action="/response" method="POST">
+        <h2>{{ session['response'] }}</h2>
+    </form>
+    {% endif %}
+
+    {% if session['response'] == 'TOO HIGH'%}
+    <form class="{{ session['class'] }}" action="/response" method="POST">
+        <h2>{{ session['response'] }}</h2>
+    </form>
+    {%endif%}
+
+    {% if session['response'] == 'WIN' %}
+    <form class="{{ session['class'] }}" action="/win" method='POST'>
+        <h2>{{ session['message'] }}</h2>
+        <input type="submit" value="Play Again">
+    </form>
+    {% endif %}
+</body>
+</html>
